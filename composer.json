@@ -1,0 +1,10 @@
+{
+	"name": "astina/seo-bundle",
+	"type": "symfony-bundle",
+	"autoload": {
+		"psr-0": {
+			"Astina\\Bundle\\SeoBundle": ""
+		}
+	},
+	"target-dir": "Astina/Bundle/SeoBundle"
+}
