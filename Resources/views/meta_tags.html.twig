@@ -1,0 +1,9 @@
+{% if page_meta_data is defined and page_meta_data %}
+    <title>{{ page_meta_data.title }}</title>
+    {% if page_meta_data.description %}
+        <meta name="description" content="{{ page_meta_data.description }}" />
+    {% endif %}
+    {% if page_meta_data.keywords %}
+        <meta name="keywords" content="{{ page_meta_data.keywords }}" />
+    {% endif %}
+{% endif %}
