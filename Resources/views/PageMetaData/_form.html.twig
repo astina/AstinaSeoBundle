@@ -1,0 +1,14 @@
+<div class="astina-seo-page-meta-data-form">
+
+    <h1>{{ 'page_meta_data_edit' | trans({'%path%': page_meta_data.path}, 'astina_seo') }}</h1>
+
+    <form action="{{ path('astina_seo_page_meta_data_edit', {'path': page_meta_data.path}) }}"
+          method="post" {{ form_enctype(form) }} novalidate>
+
+        {{ form_widget(form) }}
+
+        <button type="submit">{{ 'save' | trans({}, 'astina_seo') }}</button>
+
+    </form>
+
+</div>

@@ -71,7 +71,7 @@ class SeoExtensions extends \Twig_Extension
         }
 
         if ($titleSuffix) {
-            $pageMetaData->setTitle($pageMetaData->getTitle() . $titleSuffix);
+            $pageMetaData->setTitle($pageMetaData->getTitle() . ($pageMetaData->getTitle() ? ' - ' : '') . $titleSuffix);
         }
 
         return $pageMetaData;

@@ -31,9 +31,16 @@ public function registerBundles()
 }
 ```
 
-### Step 3: Configuration
+### Step 3: Load routing config
 
-There is nothing to configure!
+Add routing if you want to be able to edit page meta data directly.
+
+```yml
+astina_seo:
+    resource: "@AstinaSeoBundle/Resources/config/routing.yml"
+```
+
+Warning: make sure to protect this URL in your app/config/security.yml
 
 ## Usage
 

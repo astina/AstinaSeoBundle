@@ -1,0 +1,5 @@
+astina_seo_page_meta_data_edit:
+    pattern: /_page_meta_data{path}
+    defaults:  { _controller: AstinaSeoBundle:PageMetaData:edit }
+    requirements:
+        path: ".*"
