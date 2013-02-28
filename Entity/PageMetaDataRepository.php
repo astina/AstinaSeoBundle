@@ -29,4 +29,13 @@ class PageMetaDataRepository extends EntityRepository
 
         return current($pageMetaDatas);
     }
+
+    /**
+     * @param $path
+     * @return PageMetaData
+     */
+    public function findOneByPath($path)
+    {
+        return $this->findOneBy(array('path' => $path));
+    }
 }

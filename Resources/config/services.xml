@@ -9,13 +9,17 @@
     </parameters>
 
     <services>
+        <service id="astina_seo.meta_data_manager" class="Astina\Bundle\SeoBundle\MetaData\MetaDataManager">
+            <argument type="service" id="astina_seo.repository.page_meta_data" />
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+        </service>
         <service id="astina_seo.twig.extension" class="Astina\Bundle\SeoBundle\Twig\SeoExtensions">
             <argument type="service" id="astina_seo.repository.page_meta_data" />
             <argument>%astina_seo.meta_tags_template%</argument>
             <tag name="twig.extension" />
         </service>
         <service id="astina_seo.repository.page_meta_data"
-                 class="Astina\Bundle\SeoBundle\Entity\PageMetaData"
+                 class="Astina\Bundle\SeoBundle\Entity\PageMetaDataRepository"
                  factory-service="doctrine"
                  factory-method="getRepository">
             <argument>AstinaSeoBundle:PageMetaData</argument>
