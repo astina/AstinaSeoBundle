@@ -62,4 +62,16 @@ Parameters:
 
 The function tries to find a `PageMetaData` entity for the current request and uses it to render the meta tags.
 
+### Global Defaults
+Configure global default values for title, description and keywords if needed:
+
+```yml
+# app/config.yml
+astina_seo:
+    global_defaults:
+        title: "Foo App"
+        description: "The greatest and bestest app in the internet"
+        keywords: "greatest, bestest"
+```
+
 @todo: UI to create/delete `PageMetaData` entitites.

@@ -18,15 +18,18 @@ class SeoExtensions extends \Twig_Extension
      */
     private $metaTagsTemplate;
 
+    private $globalDefaults;
+
     /**
      * @var \Twig_Environment
      */
     private $environment;
 
-    function __construct(PageMetaDataRepository $repo, $metaTagsTemplate)
+    function __construct(PageMetaDataRepository $repo, $metaTagsTemplate, array $globalDefaults = array())
     {
         $this->repo = $repo;
         $this->metaTagsTemplate = $metaTagsTemplate;
+        $this->globalDefaults = $globalDefaults;
     }
 
     public function initRuntime(\Twig_Environment $environment)
@@ -59,6 +62,8 @@ class SeoExtensions extends \Twig_Extension
         if (null == $pageMetaData) {
             $pageMetaData = new PageMetaData();
         }
+
+        $defaults = array_merge($this->globalDefaults, $defaults);
 
         if (null == $pageMetaData->getTitle()) {
             $pageMetaData->setTitle($defaultTitle);

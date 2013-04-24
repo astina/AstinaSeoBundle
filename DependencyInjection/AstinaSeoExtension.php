@@ -24,5 +24,10 @@ class AstinaSeoExtension extends Extension
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+
+        if ($globalDefaults = $config['global_defaults']) {
+            $definition = $container->getDefinition('astina_seo.twig.extension');
+            $definition->addArgument($globalDefaults);
+        }
     }
 }

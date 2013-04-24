@@ -20,9 +20,16 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('astina_seo');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->arrayNode('global_defaults')
+                    ->children()
+                        ->scalarNode('title')->defaultNull()->end()
+                        ->scalarNode('description')->end()
+                        ->scalarNode('keywords')->end()
+                    ->end()
+                ->end()
+            ->end();
 
         return $treeBuilder;
     }
