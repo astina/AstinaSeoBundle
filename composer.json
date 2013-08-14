@@ -1,10 +1,19 @@
 {
-	"name": "astina/seo-bundle",
-	"type": "symfony-bundle",
-	"autoload": {
-		"psr-0": {
-			"Astina\\Bundle\\SeoBundle": ""
-		}
-	},
-	"target-dir": "Astina/Bundle/SeoBundle"
+    "name": "astina/seo-bundle",
+    "type": "symfony-bundle",
+    "description": "Allows management of page title, meta description and meta keywords.",
+    "homepage": "https://github.com/astina/AstinaSeoBundle",
+    "authors": [
+        {
+            "name": "Astina",
+            "homepage": "https://github.com/astina/AstinaSeoBundle/contributors"
+        }
+    ],
+    "licence": "MIT",
+    "autoload": {
+        "psr-0": {
+            "Astina\\Bundle\\SeoBundle": ""
+        }
+    },
+    "target-dir": "Astina/Bundle/SeoBundle"
 }
