@@ -9,7 +9,7 @@
             "homepage": "https://github.com/astina/AstinaSeoBundle/contributors"
         }
     ],
-    "licence": "MIT",
+    "license": "MIT",
     "autoload": {
         "psr-0": {
             "Astina\\Bundle\\SeoBundle": ""
